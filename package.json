@@ -1,0 +1,54 @@
+{
+  "name": "noir-benchmark-cli",
+  "version": "0.1.0",
+  "description": "Benchmarking and profiling tool for NoirJS + Barretenberg proof generation",
+  "main": "dist/main.js",
+  "bin": {
+    "noir-benchmark": "dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/main.ts",
+    "dev": "tsx --watch src/main.ts",
+    "profile": "node --prof dist/main.js",
+    "benchmark": "tsx src/main.ts benchmark",
+    "compile-circuits": "tsx scripts/compile-circuits.ts",
+    "test": "echo \"Tests coming soon\" && exit 0",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "noir",
+    "zero-knowledge",
+    "benchmarking",
+    "barretenberg",
+    "performance",
+    "profiling"
+  ],
+  "author": "Franco Perez",
+  "license": "MIT",
+  "dependencies": {
+    "@noir-lang/noir_js": "^1.0.0-beta.11",
+    "@noir-lang/acvm_js": "^1.0.0-beta.11",
+    "@noir-lang/noirc_abi": "^1.0.0-beta.11",
+    "@aztec/bb.js": "^1.2.1",
+    "commander": "^11.1.0",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "csv-writer": "^1.6.0",
+    "@json2csv/node": "^7.0.6",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "@types/blessed": "^0.1.0",
+    "tsx": "^4.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "0x": "^5.5.0",
+    "clinic": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module"
+}

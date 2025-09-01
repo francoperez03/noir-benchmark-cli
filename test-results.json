@@ -1,0 +1,152 @@
+{
+  "circuit": {
+    "name": "simple-hash",
+    "size": 1000,
+    "bytecodeSize": 5000
+  },
+  "backend": "UltraHonk",
+  "configuration": {
+    "threads": 1,
+    "isWarm": false
+  },
+  "stages": [
+    {
+      "stage": "acir-decode",
+      "timeMs": 69.45,
+      "memoryBefore": {
+        "rss": 36831232,
+        "heapTotal": 7389184,
+        "heapUsed": 5125888,
+        "external": 1649887,
+        "arrayBuffers": 10515
+      },
+      "memoryAfter": {
+        "rss": 37322752,
+        "heapTotal": 7651328,
+        "heapUsed": 4864152,
+        "external": 1649927,
+        "arrayBuffers": 10515
+      },
+      "memoryDelta": {
+        "heapUsed": -261736,
+        "heapTotal": 262144,
+        "external": 40,
+        "rss": 491520
+      }
+    },
+    {
+      "stage": "acvm-execute",
+      "timeMs": 393.98,
+      "memoryBefore": {
+        "rss": 37339136,
+        "heapTotal": 7651328,
+        "heapUsed": 4886752,
+        "external": 1649927,
+        "arrayBuffers": 10515
+      },
+      "memoryAfter": {
+        "rss": 40386560,
+        "heapTotal": 7913472,
+        "heapUsed": 5276960,
+        "external": 1649927,
+        "arrayBuffers": 10515
+      },
+      "memoryDelta": {
+        "heapUsed": 390208,
+        "heapTotal": 262144,
+        "external": 0,
+        "rss": 3047424
+      }
+    },
+    {
+      "stage": "backend-init",
+      "timeMs": 1019.91,
+      "memoryBefore": {
+        "rss": 40468480,
+        "heapTotal": 7913472,
+        "heapUsed": 5315288,
+        "external": 1649927,
+        "arrayBuffers": 10515
+      },
+      "memoryAfter": {
+        "rss": 41566208,
+        "heapTotal": 7913472,
+        "heapUsed": 5321112,
+        "external": 2698503,
+        "arrayBuffers": 1059091
+      },
+      "memoryDelta": {
+        "heapUsed": 5824,
+        "heapTotal": 0,
+        "external": 1048576,
+        "rss": 1097728
+      }
+    },
+    {
+      "stage": "proof-generate",
+      "timeMs": 2248.49,
+      "memoryBefore": {
+        "rss": 41582592,
+        "heapTotal": 7913472,
+        "heapUsed": 5336696,
+        "external": 2698503,
+        "arrayBuffers": 1059091
+      },
+      "memoryAfter": {
+        "rss": 43073536,
+        "heapTotal": 7913472,
+        "heapUsed": 4961480,
+        "external": 3722503,
+        "arrayBuffers": 1034515
+      },
+      "memoryDelta": {
+        "heapUsed": -375216,
+        "heapTotal": 0,
+        "external": 1024000,
+        "rss": 1490944
+      }
+    },
+    {
+      "stage": "proof-verify",
+      "timeMs": 181.49,
+      "memoryBefore": {
+        "rss": 43073536,
+        "heapTotal": 7913472,
+        "heapUsed": 4969448,
+        "external": 3722503,
+        "arrayBuffers": 1034515
+      },
+      "memoryAfter": {
+        "rss": 43089920,
+        "heapTotal": 7913472,
+        "heapUsed": 5004304,
+        "external": 3722503,
+        "arrayBuffers": 1034515
+      },
+      "memoryDelta": {
+        "heapUsed": 34856,
+        "heapTotal": 0,
+        "external": 0,
+        "rss": 16384
+      }
+    }
+  ],
+  "totals": {
+    "timeMs": 3913.31,
+    "memoryPeak": 0,
+    "proofSize": 2048,
+    "witnessSize": 500
+  },
+  "srs": {
+    "loadTimeMs": 1019.905416,
+    "sizeBytes": 1048576,
+    "cached": false
+  },
+  "timestamp": "2025-08-31T02:31:00.776Z",
+  "environment": {
+    "nodeVersion": "v23.6.1",
+    "platform": "darwin",
+    "cpuModel": "Apple M4",
+    "memoryTotal": 17179869184
+  }
+}

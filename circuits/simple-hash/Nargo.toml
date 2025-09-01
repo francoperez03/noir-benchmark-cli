@@ -1,0 +1,6 @@
+[package]
+name = "simple_hash"
+type = "bin"
+authors = [""]
+
+[dependencies]
