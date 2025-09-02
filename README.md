@@ -8,6 +8,18 @@ A CLI tool with world-class visual experience for measuring and optimizing ZK pr
 ![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-green?style=for-the-badge)
 ![Zero Knowledge](https://img.shields.io/badge/ZK-Noir%20%2B%20Barretenberg-purple?style=for-the-badge)
 
+## Development Roadmap
+
+### Completed
+- ✅ **MVP Complete**: CLI with visual experience and performance profiling
+- ✅ **Clean Architecture**: Domain-driven design implementation  
+- ✅ **NoirJS Integration**: Real benchmarking with UltraHonk backend
+
+### Next steps
+  - [ ] **Internal bb.js Process Staging & C++ Parallelism**: Break down bb.js proof generation into granular stages and investigate C++ level parallelism opportunities in polynomial operations, multi-scalar multiplications, and commitment computations
+  - [ ] **CoSNARK Investigation & Reliability Study**: Research collaborative SNARKs implementation while maintaining bb.js signature compatibility, adding collaborative proving as optional endpoint parameter to drastically reduce proof costs
+  - [ ] **GPU Processing for Mobile Devices**: Investigate GPU compute utilization on mobile devices (Metal/OpenCL/Vulkan) to enable ZK proof generation on smartphones and tablets
+
 ## Installation and Setup
 
 ```bash
@@ -187,13 +199,6 @@ npm run start benchmark --circuit tree
 - **ES Modules**: Modern configuration with imports/exports
 - **Clean Architecture**: Clear separation of responsibilities
 - **Domain-Driven Design**: Rich domain models
-
-## Next Steps
-
-### Future Ideas  
-- [ ] **Internal bb.js Process Staging & C++ Parallelism**: Break down bb.js proof generation into granular stages and investigate C++ level parallelism opportunities in polynomial operations, multi-scalar multiplications, and commitment computations
-- [ ] **CoSNARK Investigation & Reliability Study**: Research collaborative SNARKs implementation while maintaining bb.js signature compatibility, adding collaborative proving as optional endpoint parameter to drastically reduce proof costs
-- [ ] **GPU Processing for Mobile Devices**: Investigate GPU compute utilization on mobile devices (Metal/OpenCL/Vulkan) to enable ZK proof generation on smartphones and tablets
 
 ## Documentation
 
