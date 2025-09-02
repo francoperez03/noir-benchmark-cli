@@ -1,60 +1,60 @@
-# 🚀 NoirJS Benchmark CLI
+# NoirJS Benchmark CLI
 
 > **Professional-grade benchmarking tool for NoirJS + Barretenberg zero-knowledge proof generation**
 
-Una herramienta CLI con experiencia visual de clase mundial para medir y optimizar el rendimiento de generación de pruebas ZK usando NoirJS y Barretenberg.
+A CLI tool with world-class visual experience for measuring and optimizing ZK proof generation performance using NoirJS and Barretenberg.
 
 ![Benchmark CLI Demo](https://img.shields.io/badge/CLI-Visual%20Experience-blue?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-green?style=for-the-badge)
 ![Zero Knowledge](https://img.shields.io/badge/ZK-Noir%20%2B%20Barretenberg-purple?style=for-the-badge)
 
-## ✨ Características Destacadas
+## Key Features
 
-- 🎨 **Experiencia Visual Rica**: Diagramas ASCII profesionales basados en principios de Don Norman
-- 🏗️ **Clean Architecture**: Separación de capas con Domain-Driven Design
-- ⚡ **Benchmarking Real**: Integración completa con NoirJS y UltraHonk backend
-- 📊 **Pipeline Visual**: Diagrama de flujo que muestra el proceso completo
-- 🎯 **Focus en lo Importante**: Destaca que Proof Generation es 80-85% del tiempo de ejecución
-- 📈 **Progreso en Tiempo Real**: Barras de progreso y indicadores visuales
+- **Rich Visual Experience**: Professional ASCII diagrams based on Don Norman's principles
+- **Clean Architecture**: Layer separation with Domain-Driven Design
+- **Real Benchmarking**: Complete integration with NoirJS and UltraHonk backend
+- **Visual Pipeline**: Flow diagram showing the complete process
+- **Focus on What Matters**: Highlights that Proof Generation is 80-85% of execution time
+- **Real-time Progress**: Progress bars and visual indicators
 
-## 🚀 Instalación y Setup
+## Installation and Setup
 
 ```bash
-# Clonar e instalar dependencias
+# Clone and install dependencies
 npm install
 
-# Compilar TypeScript  
+# Build TypeScript  
 npm run build
 
-# Probar instalación
+# Test installation
 npm run start -- --help
 ```
 
-## 🎯 Uso
+## Usage
 
-### Comandos Principales
+### Main Commands
 
 ```bash
-# Benchmark básico con experiencia visual completa
+# Basic benchmark with complete visual experience
 npm run start benchmark --circuit simple-hash
 
-# Benchmark con modo verbose (barras de progreso detalladas)
+# Benchmark with verbose mode (detailed progress bars)
 npm run start benchmark --circuit simple-hash --verbose
 
-# Benchmark con múltiples runs
+# Benchmark with multiple runs
 npm run start benchmark --circuit tree --runs 3
 
-# Ver circuitos disponibles
+# List available circuits
 npm run start list-circuits
 
-# Ver ayuda completa
+# View complete help
 npm run start -- --help
 ```
 
-### Opciones Avanzadas
+### Advanced Options
 
 ```bash
-# Benchmark completo con todas las opciones
+# Complete benchmark with all options
 npm run start benchmark \\
   --circuit simple-hash \\
   --backend UltraHonk \\
@@ -64,9 +64,9 @@ npm run start benchmark \\
   --verbose
 ```
 
-## 🎨 Experiencia Visual
+## Visual Experience
 
-### Modo Normal
+### Normal Mode
 ```
 ╔═══════════════════════════════════════╗
 ║       NOIR BENCHMARK CLI v0.1.0       ║
@@ -81,13 +81,13 @@ npm run start benchmark \\
 [BENCH] Backend Init: 2ms | 11MB
 ⏳ Generating witness...
 [BENCH] Witness Generation: 16ms | 12MB
-⏳ 🎯 Generating proof (THE MAIN EVENT)...
-[BENCH] 🎯 Proof Generation: 809ms | 13MB
+⏳ Generating proof (THE MAIN EVENT)...
+[BENCH] Proof Generation: 809ms | 13MB
 ⏳ Verifying proof...
 [BENCH] Proof Verify: 150ms | 14MB
 ✅ Benchmark completed successfully
 
-🔄 BENCHMARK PIPELINE EXECUTION FLOW
+BENCHMARK PIPELINE EXECUTION FLOW
 
 ┌───────────┐      ┌───────────┐      ┌───────────┐      ╔═══════════╗      ┌───────────┐
 │  CIRCUIT  │─────▶│  BACKEND  │─────▶│  WITNESS  │─────▶║    🎯     ║─────▶│   PROOF   │
@@ -108,8 +108,8 @@ npm run start benchmark \\
 🏆 PERFORMANCE INSIGHT: Proof Generation dominates 82.8% of execution time
 ```
 
-### Modo Verbose
-Con `--verbose` obtienes barras de progreso detalladas para cada stage:
+### Verbose Mode
+With `--verbose` you get detailed progress bars for each stage:
 
 ```
 ┌─ STAGE: 🎯 Proof Generation (THE MAIN EVENT) ──────────────────┐
@@ -118,160 +118,118 @@ Con `--verbose` obtienes barras de progreso detalladas para cada stage:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## 📊 Métricas Capturadas
+## Captured Metrics
 
-### Por Stage
-- **⏱️ Tiempo**: Medición precisa en milisegundos por cada etapa
-- **🧠 Memoria**: Uso de memoria heap en MB
-- **📈 Porcentaje**: Qué % del tiempo total usa cada stage
+### Per Stage
+- **Time**: Precise measurement in milliseconds for each stage
+- **Memory**: Heap memory usage in MB
+- **Percentage**: What % of total time each stage uses
 
-### Pipeline Completo
-1. **Circuit Load**: Carga del circuito compilado desde JSON
-2. **Backend Init**: Inicialización del sistema de pruebas UltraHonk  
-3. **Witness Generation**: Ejecución del circuito con inputs
-4. **🎯 Proof Generation**: **THE MAIN EVENT** - Generación de la prueba ZK (80-85% del tiempo)
-5. **Proof Verify**: Verificación de la prueba generada
+### Complete Pipeline
+1. **Circuit Load**: Loading compiled circuit from JSON
+2. **Backend Init**: UltraHonk proof system initialization  
+3. **Witness Generation**: Circuit execution with inputs
+4. **🎯 Proof Generation**: **THE MAIN EVENT** - ZK proof generation (80-85% of time)
+5. **Proof Verify**: Generated proof verification
 
-### Insights Clave
-- **Proof Generation es el cuello de botella**: Consistentemente 80-85% del tiempo total
-- **Memory footprint bajo**: ~11-14MB para circuitos simples
-- **Verificación eficiente**: Solo 10-15% del tiempo total
+### Key Insights
+- **Proof Generation is the bottleneck**: Consistently 80-85% of total time
+- **Low memory footprint**: ~11-14MB for simple circuits
+- **Efficient verification**: Only 10-15% of total time
 
-## 🏗️ Arquitectura
+## Architecture
 
-Este proyecto implementa **Clean Architecture** con separación clara de responsabilidades:
+This project implements **Clean Architecture** with clear separation of responsibilities:
 
-### Estructura de Capas
+### Layer Structure
 ```
 src/
-├── domain/              # 🔵 Capa de Dominio
-│   ├── models/          #    Entidades y Value Objects
-│   └── repositories/    #    Interfaces de repositorio
-├── application/         # 🟢 Capa de Aplicación  
-│   ├── services/        #    Servicios de aplicación
-│   └── orchestrators/   #    Orquestadores de workflows
-├── infrastructure/      # 🟡 Capa de Infraestructura
-│   ├── circuit/         #    Repositorio de circuitos
-│   ├── noir/           #    Implementación NoirJS/UltraHonk
-│   └── profiling/       #    Profiling de rendimiento
-├── presentation/        # 🔴 Capa de Presentación
-│   └── cli/            #    Comandos CLI
-└── shared/             # ⚫ Utilidades Compartidas
-    ├── visual/         #    ASCII Art y elementos visuales
-    ├── logger/         #    Sistema de logging avanzado
-    └── errors/         #    Jerarquía de errores
+├── domain/              # 🔵 Domain Layer
+│   ├── models/          #    Entities and Value Objects
+│   └── repositories/    #    Repository interfaces
+├── application/         # 🟢 Application Layer  
+│   ├── services/        #    Application services
+│   └── orchestrators/   #    Workflow orchestrators
+├── infrastructure/      # 🟡 Infrastructure Layer
+│   ├── circuit/         #    Circuit repository
+│   ├── noir/           #    NoirJS/UltraHonk implementation
+│   └── profiling/       #    Performance profiling
+├── presentation/        # 🔴 Presentation Layer
+│   └── cli/            #    CLI commands
+└── shared/             # ⚫ Shared Utilities
+    ├── visual/         #    ASCII Art and visual elements
+    ├── logger/         #    Advanced logging system
+    └── errors/         #    Error hierarchy
 ```
 
-Ver [ARCHITECTURE.md](./ARCHITECTURE.md) para detalles completos.
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for complete details.
 
-## 🎨 Principios de Diseño Visual
+## Visual Design Principles
 
-Esta herramienta aplica los principios de **"The Design of Everyday Things"** de Don Norman:
+This tool applies the principles of **"The Design of Everyday Things"** by Don Norman:
 
-### ✅ Principios Aplicados
-1. **Visibilidad**: Estado del sistema siempre visible
-2. **Feedback**: Retroalimentación inmediata en cada acción  
-3. **Mapping**: Relación clara entre acciones y resultados
-4. **Affordances**: Elementos que sugieren su función
-5. **Constraints**: Guía visual hacia lo más importante
+### ✅ Applied Principles
+1. **Visibility**: System state always visible
+2. **Feedback**: Immediate feedback on every action  
+3. **Mapping**: Clear relationship between actions and results
+4. **Affordances**: Elements that suggest their function
+5. **Constraints**: Visual guidance toward what matters most
 
-### 🎯 Resultado
-- **Experiencia intuitiva**: Los usuarios entienden inmediatamente qué está pasando
-- **Focus en lo importante**: El Stage 4 (Proof Generation) se destaca visualmente
-- **Información accionable**: Las métricas guían hacia optimizaciones reales
+### 🎯 Result
+- **Intuitive experience**: Users immediately understand what's happening
+- **Focus on what matters**: Stage 4 (Proof Generation) stands out visually
+- **Actionable information**: Metrics guide toward real optimizations
 
-## 🧪 Circuitos Disponibles
+## Available Circuits
 
-| Circuito | Descripción | Complejidad | Tiempo Típico |
-|----------|-------------|-------------|---------------|
-| `simple-hash` | Hash simple con Poseidon | Baja | ~800ms |
-| `tree` | Verificación Merkle Tree | Media | ~300ms |
+| Circuit | Description | Complexity | Typical Time |
+|---------|-------------|------------|-------------|
+| `simple-hash` | Simple Poseidon hash | Low | ~800ms |
+| `tree` | Merkle Tree verification | Medium | ~300ms |
 
-Agregar nuevos circuitos en `circuits/<nombre>/`:
-- `target/<nombre>.json` - Circuito compilado
-- `Prover.toml` - Inputs de prueba
+Add new circuits in `circuits/<name>/`:
+- `target/<name>.json` - Compiled circuit
+- `Prover.toml` - Test inputs
 
-## 📈 Casos de Uso
+## Use Cases
 
-### 1. Optimización de Rendimiento
+### 1. Performance Optimization
 ```bash
-# Identificar bottlenecks
+# Identify bottlenecks
 npm run start benchmark --circuit my-circuit --runs 5 --verbose
 ```
 
-### 2. Comparación de Circuitos
+### 2. Circuit Comparison
 ```bash
-# Comparar diferentes circuitos
+# Compare different circuits
 npm run start benchmark --circuit simple-hash
 npm run start benchmark --circuit tree
 ```
 
-### 3. Análisis de Memoria
-```bash  
-# Monitorear uso de memoria
-npm run start benchmark --circuit complex-circuit --verbose
-```
 
-### 4. Datos para Optimización
-```bash
-# Exportar resultados para análisis
-npm run start benchmark --circuit my-circuit --runs 10 --output analysis.json
-```
+### Development Structure
+- **TypeScript**: Source code in `src/`
+- **ES Modules**: Modern configuration with imports/exports
+- **Clean Architecture**: Clear separation of responsibilities
+- **Domain-Driven Design**: Rich domain models
 
-## 🔧 Desarrollo
+## Next Steps
 
-### Scripts NPM
-```bash
-npm run build      # Compilar TypeScript
-npm run start      # Ejecutar CLI
-npm run dev        # Desarrollo con watch
-npm run clean      # Limpiar dist/
-```
+### Future Ideas  
+- [ ] **Internal bb.js Process Staging & C++ Parallelism**: Break down bb.js proof generation into granular stages and investigate C++ level parallelism opportunities in polynomial operations, multi-scalar multiplications, and commitment computations
+- [ ] **CoSNARK Investigation & Reliability Study**: Research collaborative SNARKs implementation while maintaining bb.js signature compatibility, adding collaborative proving as optional endpoint parameter to drastically reduce proof costs
+- [ ] **GPU Processing for Mobile Devices**: Investigate GPU compute utilization on mobile devices (Metal/OpenCL/Vulkan) to enable ZK proof generation on smartphones and tablets
 
-### Estructura de Desarrollo
-- **TypeScript**: Código fuente en `src/`
-- **ES Modules**: Configuración moderna con imports/exports
-- **Clean Architecture**: Separación clara de responsabilidades
-- **Domain-Driven Design**: Modelos ricos en el dominio
+## Documentation
 
-## 🚀 Próximos Pasos
-
-### 🔄 En Desarrollo
-- [ ] Dashboard interactivo con blessed-contrib
-- [ ] Comparaciones side-by-side entre backends
-- [ ] Exportación a formatos adicionales (CSV, PNG charts)
-- [ ] Circuitos más complejos (signature verification, etc.)
-
-### 💡 Ideas Futuras  
-- [ ] Integración con CI/CD para regression testing
-- [ ] Web dashboard para visualización avanzada
-- [ ] Benchmarking automático en diferentes entornos
-- [ ] Profiling de gas costs para L2s
-
-## 📚 Documentación
-
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Documentación completa de arquitectura
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - Complete architecture documentation
 - [NoirJS Documentation](https://noir-lang.org/docs/reference/NoirJS/)
-- [Barretenberg TypeScript](https://github.com/AztecProtocol/barretenberg/tree/master/ts)
+- [Barretenberg TypeScript](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)
 
-## 🤝 Contribuir
 
-Este proyecto está abierto a contribuciones. Por favor:
-
-1. Fork el repositorio
-2. Crea una branch para tu feature (`git checkout -b feature/amazing-feature`)
-3. Sigue los principios de Clean Architecture
-4. Mantén la experiencia visual consistente
-5. Agrega tests si es posible
-6. Commit con mensajes descriptivos
-7. Push y crea un Pull Request
-
-## 📝 Licencia
-
-MIT License - ver [LICENSE](./LICENSE) para detalles.
 
 ---
 
-**🎯 Focusing on what matters: Proof Generation is where the magic happens (and where 83% of your time goes).**
+**Focusing on what matters: Proof Generation is where the magic happens (and where 83% of your time goes).**
 
-*Para detalles técnicos completos de la arquitectura, ver [ARCHITECTURE.md](./ARCHITECTURE.md)*
+*For complete technical architecture details, see [ARCHITECTURE.md](./ARCHITECTURE.md)*
