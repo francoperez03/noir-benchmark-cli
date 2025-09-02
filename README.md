@@ -8,15 +8,6 @@ A CLI tool with world-class visual experience for measuring and optimizing ZK pr
 ![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-green?style=for-the-badge)
 ![Zero Knowledge](https://img.shields.io/badge/ZK-Noir%20%2B%20Barretenberg-purple?style=for-the-badge)
 
-## Key Features
-
-- **Rich Visual Experience**: Professional ASCII diagrams based on Don Norman's principles
-- **Clean Architecture**: Layer separation with Domain-Driven Design
-- **Real Benchmarking**: Complete integration with NoirJS and UltraHonk backend
-- **Visual Pipeline**: Flow diagram showing the complete process
-- **Focus on What Matters**: Highlights that Proof Generation is 80-85% of execution time
-- **Real-time Progress**: Progress bars and visual indicators
-
 ## Installation and Setup
 
 ```bash
@@ -163,22 +154,6 @@ src/
 ```
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for complete details.
-
-## Visual Design Principles
-
-This tool applies the principles of **"The Design of Everyday Things"** by Don Norman:
-
-### ✅ Applied Principles
-1. **Visibility**: System state always visible
-2. **Feedback**: Immediate feedback on every action  
-3. **Mapping**: Clear relationship between actions and results
-4. **Affordances**: Elements that suggest their function
-5. **Constraints**: Visual guidance toward what matters most
-
-### 🎯 Result
-- **Intuitive experience**: Users immediately understand what's happening
-- **Focus on what matters**: Stage 4 (Proof Generation) stands out visually
-- **Actionable information**: Metrics guide toward real optimizations
 
 ## Available Circuits
 
